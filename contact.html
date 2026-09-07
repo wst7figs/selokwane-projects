@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact & Free Quote — Selokwane Projects Pty Ltd</title>
+    <meta
+      name="description"
+      content="Contact Selokwane Projects Pty Ltd or request a free quote for waterproofing, painting, damp proofing, wall & roof coatings and ceiling paving in Pretoria, South Africa."
+    />
+    <link rel="canonical" href="https://selokwane-projects.co.za/contact.html" />
+    <meta property="og:title" content="Contact & Free Quote — Selokwane Projects Pty Ltd" />
+    <meta property="og:description" content="Get in touch or request a free quote for waterproofing, painting, damp proofing and protective coatings." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://selokwane-projects.co.za/contact.html" />
+
+    <meta name="theme-color" content="#123d29" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: 152 55% 14%;
+        --primary-fg: 0 0% 100%;
+        --accent: 82 78% 48%;
+        --accent-fg: 152 55% 10%;
+        --bg: 0 0% 100%;
+        --fg: 150 30% 8%;
+        --muted: 150 8% 45%;
+        --border: 150 12% 88%;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        color: hsl(var(--fg));
+        background: hsl(var(--bg));
+        -webkit-font-smoothing: antialiased;
+      }
+      a { text-decoration: none; color: inherit; }
+      .container { width: 100%; max-width: 720px; margin: 0 auto; padding: 0 24px; }
+      .container-wide { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+      h1, h2, .heading { font-family: "Archivo Black", "Inter", sans-serif; font-weight: 400; }
+
+      /* Header (mirrors gallery/site nav) */
+      header {
+        position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+        background: hsl(var(--primary)); color: hsl(var(--primary-fg));
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      }
+      .nav-row { display: flex; align-items: center; justify-content: center; gap: 32px; padding: 12px 24px; }
+      .nav-side { display: flex; align-items: center; gap: 40px; flex: 1; }
+      .nav-side.left { justify-content: flex-end; }
+      .nav-side.right { justify-content: flex-start; }
+      .nav-link {
+        font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+        letter-spacing: 0.2em; transition: color 0.2s;
+      }
+      .nav-link:hover, .nav-link.active { color: hsl(var(--accent)); }
+      .logo-badge {
+        flex-shrink: 0; width: 76px; height: 76px; border-radius: 50%;
+        background: #fff center/contain no-repeat; border: 2px solid hsl(var(--accent));
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); transition: transform 0.2s;
+      }
+      .logo-badge:hover { transform: scale(1.05); }
+      .nav-phone {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: hsl(var(--accent)); color: hsl(var(--accent-fg));
+        font-weight: 800; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em;
+        padding: 12px 22px; border-radius: 999px; transition: background 0.2s;
+      }
+      .nav-toggle { display: none; background: none; border: none; color: #fff; cursor: pointer; padding: 8px; }
+
+      /* Hero */
+      .q-hero { background: hsl(var(--primary)); color: hsl(var(--primary-fg)); text-align: center; padding: 150px 24px 60px; }
+      .q-hero .eyebrow {
+        display: inline-block; color: hsl(var(--accent)); font-weight: 800;
+        letter-spacing: 0.3em; text-transform: uppercase; font-size: 0.78rem; margin-bottom: 16px;
+      }
+      .q-hero h1 { font-size: clamp(2.2rem, 5.5vw, 3.6rem); line-height: 1; }
+      .q-hero p { margin: 16px auto 0; max-width: 560px; color: rgba(255, 255, 255, 0.82); font-size: 1.02rem; }
+
+      /* Contact + Form section layout */
+      .q-main { padding: 60px 0 90px; }
+      .q-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 380px) minmax(0, 1fr);
+        gap: 72px;
+        align-items: start;
+      }
+      .q-grid > .q-details-col { order: 1; }
+      .q-grid > .q-form-col { order: 2; }
+
+      /* Form */
+      .field { margin-bottom: 20px; }
+      label { display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 8px; }
+      label .req { color: hsl(152 55% 32%); }
+      input, select, textarea {
+        width: 100%; font: inherit; color: hsl(var(--fg));
+        padding: 13px 15px; border: 1px solid hsl(var(--border)); border-radius: 12px;
+        background: #fff; transition: border-color 0.2s, box-shadow 0.2s;
+      }
+      input:focus, select:focus, textarea:focus {
+        outline: none; border-color: hsl(var(--primary));
+        box-shadow: 0 0 0 3px hsl(var(--accent) / 0.25);
+      }
+      textarea { resize: vertical; min-height: 120px; }
+      .row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+      .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+      .btn {
+        display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+        font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.82rem;
+        padding: 16px 28px; border-radius: 999px; border: none; cursor: pointer; flex: 1; min-width: 220px;
+        transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      }
+      .btn:hover { transform: translateY(-2px); }
+      .btn-wa { background: #25d366; color: #fff; box-shadow: 0 8px 22px rgba(37, 211, 102, 0.35); }
+      .btn-email { background: hsl(var(--primary)); color: #fff; box-shadow: 0 8px 22px rgba(7, 42, 26, 0.3); }
+      .hint { color: hsl(var(--muted)); font-size: 0.85rem; margin-top: 18px; text-align: center; }
+      .err { border-color: #dc2626 !important; }
+      .err-msg { color: #dc2626; font-size: 0.8rem; margin-top: 6px; display: none; }
+
+      /* Contact details sidebar */
+      .q-details-col h2 {
+        font-size: clamp(1.6rem, 3vw, 2rem); color: hsl(var(--primary));
+        text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 34px;
+      }
+      .detail-list { display: flex; flex-direction: column; gap: 30px; }
+      .detail {
+        display: flex; align-items: center; gap: 20px;
+      }
+      .detail .ico {
+        flex-shrink: 0; width: 62px; height: 62px; border-radius: 50%;
+        background: hsl(var(--primary)); color: hsl(var(--accent));
+        display: flex; align-items: center; justify-content: center;
+      }
+      .detail .ico svg { width: 26px; height: 26px; }
+      .detail .meta .lbl { color: hsl(var(--muted)); font-size: 0.98rem; margin-bottom: 3px; }
+      .detail .meta .val { font-weight: 800; font-size: 1.28rem; color: hsl(var(--fg)); }
+      .detail .meta a.val { transition: color 0.2s; }
+      .detail .meta a.val:hover { color: hsl(var(--primary)); }
+
+      footer.q-foot { background: #072a1a; color: rgba(255, 255, 255, 0.75); text-align: center; padding: 28px 24px; font-size: 0.9rem; }
+
+      .wa-float {
+        position: fixed; right: 22px; bottom: 22px; z-index: 9999;
+        width: 74px; height: 74px; display: flex; align-items: center; justify-content: center;
+        background: #25d366; color: #fff; border-radius: 50%;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28); transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .wa-float:hover { transform: scale(1.08); }
+
+      @media (max-width: 860px) {
+        .nav-row { justify-content: space-between; }
+        .nav-side { display: none; position: fixed; top: 0; right: 0; height: 100vh;
+          width: min(78vw, 320px); background: hsl(var(--primary)); flex-direction: column;
+          align-items: flex-start; justify-content: center; gap: 26px; padding: 40px;
+          box-shadow: -20px 0 50px rgba(0, 0, 0, 0.4); }
+        .nav-side.open { display: flex; }
+        .nav-side.left, .nav-side.right { justify-content: center; }
+        .nav-toggle { display: inline-flex; }
+      }
+      @media (max-width: 860px) {
+        .q-grid { grid-template-columns: 1fr; gap: 48px; }
+        .q-grid > .q-form-col { order: 1; }
+        .q-grid > .q-details-col { order: 2; }
+      }
+      @media (max-width: 560px) {
+        .row { grid-template-columns: 1fr; }
+        .wa-float { width: 64px; height: 64px; right: 16px; bottom: 16px; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="nav-row">
+        <nav class="nav-side left" id="navLeft">
+          <a class="nav-link" href="/#waterproofing">Services</a>
+          <a class="nav-link" href="/#about-us">About</a>
+        </nav>
+        <a class="logo-badge" href="/" aria-label="Selokwane Projects home" style="background-image: url('/logo.png');"></a>
+        <div class="nav-side right" id="navRight">
+          <a class="nav-link" href="/gallery.html">Gallery</a>
+          <a class="nav-link active" href="/contact.html">Contact</a>
+          <a class="nav-phone" href="tel:0720145161">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            072 014 5161
+          </a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <section class="q-hero">
+      <span class="eyebrow">Free · No Obligation</span>
+      <h1>Get in Touch</h1>
+      <p>Tell us about your project and we'll get back to you. Send it straight to our WhatsApp or by email — whichever suits you.</p>
+    </section>
+
+    <section class="q-main">
+      <div class="container-wide">
+        <div class="q-grid">
+          <div class="q-details-col">
+            <h2>Contact Details</h2>
+            <div class="detail-list">
+              <div class="detail">
+                <span class="ico" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </span>
+                <div class="meta">
+                  <div class="lbl">Call us</div>
+                  <a class="val" href="tel:0720145161">072 014 5161</a>
+                </div>
+              </div>
+
+              <div class="detail">
+                <span class="ico" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                  </svg>
+                </span>
+                <div class="meta">
+                  <div class="lbl">Follow us</div>
+                  <a class="val" href="https://www.facebook.com/profile.php?id=100083385788589" target="_blank" rel="noopener noreferrer">Facebook Page</a>
+                </div>
+              </div>
+
+              <div class="detail">
+                <span class="ico" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </span>
+                <div class="meta">
+                  <div class="lbl">Service area</div>
+                  <span class="val">Pretoria, South Africa</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="q-form-col">
+            <form id="quoteForm" novalidate>
+              <div class="row">
+                <div class="field">
+                  <label for="name">Full name <span class="req">*</span></label>
+                  <input type="text" id="name" name="name" autocomplete="name" required />
+                  <div class="err-msg" data-for="name">Please enter your name.</div>
+                </div>
+                <div class="field">
+                  <label for="phone">Phone <span class="req">*</span></label>
+                  <input type="tel" id="phone" name="phone" autocomplete="tel" required />
+                  <div class="err-msg" data-for="phone">Please enter a contact number.</div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="service">Service needed <span class="req">*</span></label>
+                <select id="service" name="service" required>
+                  <option value="" selected disabled>Select a service…</option>
+                  <option>Waterproofing</option>
+                  <option>Painting</option>
+                  <option>Damp Proofing</option>
+                  <option>Wall Coatings</option>
+                  <option>Roof Coatings</option>
+                  <option>Ceiling Paving</option>
+                  <option>Not sure / Other</option>
+                </select>
+                <div class="err-msg" data-for="service">Please choose a service.</div>
+              </div>
+
+              <div class="field">
+                <label for="area">Suburb / area</label>
+                <input type="text" id="area" name="area" placeholder="e.g. Pretoria East" />
+              </div>
+
+              <div class="field">
+                <label for="details">Project details</label>
+                <textarea id="details" name="details" placeholder="Roof size, current problem, timeline, anything helpful…"></textarea>
+              </div>
+
+              <div class="actions">
+                <button type="button" class="btn btn-wa" id="sendWa">
+                  <svg viewBox="0 0 32 32" width="20" height="20" fill="currentColor" aria-hidden="true">
+                    <path d="M16.001 3.2C8.938 3.2 3.2 8.938 3.2 16c0 2.257.59 4.463 1.712 6.41L3.2 28.8l6.55-1.715A12.74 12.74 0 0 0 16 28.8h.005C23.063 28.8 28.8 23.062 28.8 16S23.063 3.2 16.001 3.2z"/>
+                  </svg>
+                  Send via WhatsApp
+                </button>
+                <button type="button" class="btn btn-email" id="sendEmail">Send by Email</button>
+              </div>
+              <p class="hint">Your details are only used to prepare your message — nothing is stored on this page.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="q-foot">
+      <p>&copy; <span id="year"></span> Selokwane Projects Pty Ltd. All rights reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/27720145161" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Chat with us on WhatsApp">
+      <svg viewBox="0 0 32 32" width="40" height="40" fill="currentColor" aria-hidden="true">
+        <path d="M16.001 3.2C8.938 3.2 3.2 8.938 3.2 16c0 2.257.59 4.463 1.712 6.41L3.2 28.8l6.55-1.715A12.74 12.74 0 0 0 16 28.8h.005C23.063 28.8 28.8 23.062 28.8 16S23.063 3.2 16.001 3.2zm0 23.02h-.004a10.6 10.6 0 0 1-5.4-1.48l-.387-.23-4.017 1.052 1.072-3.915-.252-.402A10.56 10.56 0 0 1 5.4 16c0-5.85 4.76-10.61 10.606-10.61 2.834 0 5.497 1.105 7.5 3.11a10.54 10.54 0 0 1 3.104 7.505c0 5.85-4.76 10.61-10.61 10.61zm5.816-7.946c-.319-.16-1.885-.93-2.177-1.037-.292-.106-.505-.16-.717.16-.213.32-.823 1.037-1.01 1.25-.186.213-.372.24-.69.08-.319-.16-1.346-.496-2.564-1.582-.948-.845-1.588-1.888-1.774-2.207-.186-.32-.02-.492.14-.651.144-.143.319-.372.478-.559.16-.186.213-.319.319-.532.107-.213.053-.399-.027-.559-.08-.16-.717-1.728-.982-2.366-.259-.621-.522-.537-.717-.547l-.611-.011c-.213 0-.559.08-.851.399-.292.32-1.116 1.091-1.116 2.659 0 1.568 1.143 3.083 1.302 3.296.16.213 2.249 3.434 5.45 4.815.762.329 1.356.525 1.82.672.765.243 1.46.209 2.01.127.613-.092 1.885-.771 2.151-1.516.266-.744.266-1.382.186-1.516-.08-.133-.292-.213-.611-.373z"/>
+      </svg>
+    </a>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      var t = document.getElementById("navToggle");
+      t.addEventListener("click", function () {
+        document.getElementById("navLeft").classList.toggle("open");
+        document.getElementById("navRight").classList.toggle("open");
+      });
+
+      var WHATSAPP = "27720145161";
+      var EMAIL = "info@selokwane-projects.co.za"; // TODO: confirm the real inbox address
+
+      function validate() {
+        var ok = true;
+        ["name", "phone", "service"].forEach(function (id) {
+          var el = document.getElementById(id);
+          var msg = document.querySelector('.err-msg[data-for="' + id + '"]');
+          if (!el.value.trim()) {
+            el.classList.add("err");
+            if (msg) msg.style.display = "block";
+            ok = false;
+          } else {
+            el.classList.remove("err");
+            if (msg) msg.style.display = "none";
+          }
+        });
+        return ok;
+      }
+
+      function buildMessage() {
+        var v = function (id) { return (document.getElementById(id).value || "").trim(); };
+        var lines = [
+          "New quote request — Selokwane Projects",
+          "",
+          "Name: " + v("name"),
+          "Phone: " + v("phone"),
+          "Service: " + v("service"),
+        ];
+        if (v("area")) lines.push("Area: " + v("area"));
+        if (v("details")) lines.push("Details: " + v("details"));
+        return lines.join("\n");
+      }
+
+      document.getElementById("sendWa").addEventListener("click", function () {
+        if (!validate()) return;
+        var url = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(buildMessage());
+        window.open(url, "_blank", "noopener");
+      });
+
+      document.getElementById("sendEmail").addEventListener("click", function () {
+        if (!validate()) return;
+        var subject = "Quote request — " + (document.getElementById("service").value || "Selokwane Projects");
+        window.location.href =
+          "mailto:" + EMAIL + "?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(buildMessage());
+      });
+    </script>
+  </body>
+</html>

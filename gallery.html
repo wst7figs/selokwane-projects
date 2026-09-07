@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery — Selokwane Projects Pty Ltd</title>
+    <meta
+      name="description"
+      content="Gallery of completed waterproofing, painting, damp proofing, wall & roof coating and ceiling paving projects by Selokwane Projects Pty Ltd."
+    />
+    <link rel="canonical" href="https://selokwane-projects.co.za/gallery.html" />
+    <meta property="og:title" content="Gallery — Selokwane Projects Pty Ltd" />
+    <meta property="og:description" content="Completed waterproofing, painting, damp proofing, wall & roof coating and ceiling paving projects." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://selokwane-projects.co.za/gallery.html" />
+    <meta property="og:image" content="https://vibe.filesafe.space/1788274059754407376/attachments/85a1a8a3-63b3-434b-b42e-6011bab505e3.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="theme-color" content="#123d29" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: 152 55% 14%;
+        --primary-fg: 0 0% 100%;
+        --accent: 82 78% 48%;
+        --accent-fg: 152 55% 10%;
+        --bg: 0 0% 100%;
+        --fg: 150 30% 8%;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        color: hsl(var(--fg));
+        background: hsl(var(--bg));
+        -webkit-font-smoothing: antialiased;
+      }
+      img { display: block; max-width: 100%; }
+      a { text-decoration: none; color: inherit; }
+      .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+      h1, h2, .heading { font-family: "Archivo Black", "Inter", sans-serif; font-weight: 400; }
+
+      /* ---------- Header (mirrors the main site nav) ---------- */
+      header {
+        position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+        background: hsl(var(--primary));
+        color: hsl(var(--primary-fg));
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      }
+      .nav-row {
+        display: flex; align-items: center; justify-content: center; gap: 32px;
+        padding: 12px 24px;
+      }
+      .nav-side { display: flex; align-items: center; gap: 40px; flex: 1; }
+      .nav-side.left { justify-content: flex-end; }
+      .nav-side.right { justify-content: flex-start; }
+      .nav-link {
+        font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+        letter-spacing: 0.2em; transition: color 0.2s;
+      }
+      .nav-link:hover, .nav-link.active { color: hsl(var(--accent)); }
+      .logo-badge {
+        flex-shrink: 0; width: 76px; height: 76px; border-radius: 50%;
+        background: #fff center/contain no-repeat; border: 2px solid hsl(var(--accent));
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); transition: transform 0.2s;
+      }
+      .logo-badge:hover { transform: scale(1.05); }
+      .nav-icon { display: inline-flex; transition: color 0.2s; }
+      .nav-icon:hover { color: hsl(var(--accent)); }
+      .nav-phone {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: hsl(var(--accent)); color: hsl(var(--accent-fg));
+        font-weight: 800; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em;
+        padding: 12px 22px; border-radius: 999px; transition: background 0.2s;
+      }
+      .nav-phone:hover { background: hsl(var(--accent) / 0.9); }
+      .nav-toggle { display: none; background: none; border: none; color: #fff; cursor: pointer; padding: 8px; }
+
+      /* ---------- Hero band ---------- */
+      .g-hero {
+        background: hsl(var(--primary)); color: hsl(var(--primary-fg));
+        text-align: center; padding: 160px 24px 70px;
+      }
+      .g-hero .eyebrow {
+        display: inline-block; color: hsl(var(--accent)); font-weight: 800;
+        letter-spacing: 0.3em; text-transform: uppercase; font-size: 0.78rem; margin-bottom: 16px;
+      }
+      .g-hero h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1; }
+      .g-hero p { margin: 18px auto 0; max-width: 620px; color: rgba(255, 255, 255, 0.8); font-size: 1.05rem; }
+
+      /* ---------- Gallery grid ---------- */
+      .gallery { padding: 70px 0 90px; }
+      .grid {
+        display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+        grid-auto-flow: dense;
+      }
+      .tile {
+        position: relative; overflow: hidden; border-radius: 14px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12); aspect-ratio: 4 / 3;
+        background: hsl(var(--primary));
+      }
+      .tile.tall { grid-row: span 2; aspect-ratio: 4 / 6; }
+      .tile.wide { grid-column: span 2; }
+      .tile img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+      .tile:hover img { transform: scale(1.08); }
+      .tile .cap {
+        position: absolute; left: 0; right: 0; bottom: 0;
+        padding: 26px 18px 14px; color: #fff; font-weight: 700; letter-spacing: 0.05em;
+        text-transform: uppercase; font-size: 0.85rem;
+        background: linear-gradient(transparent, rgba(7, 42, 26, 0.85));
+      }
+
+      /* ---------- CTA + footer ---------- */
+      .g-cta { background: hsl(var(--primary)); color: #fff; text-align: center; padding: 80px 24px; }
+      .g-cta h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 26px; }
+      .g-cta a {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: hsl(var(--accent)); color: hsl(var(--accent-fg));
+        font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em;
+        padding: 16px 34px; border-radius: 999px;
+      }
+      footer.g-foot {
+        background: #072a1a; color: rgba(255, 255, 255, 0.75);
+        text-align: center; padding: 28px 24px; font-size: 0.9rem;
+      }
+
+      /* ---------- WhatsApp float ---------- */
+      .wa-float {
+        position: fixed; right: 22px; bottom: 22px; z-index: 9999;
+        width: 74px; height: 74px; display: flex; align-items: center; justify-content: center;
+        background: #25d366; color: #fff; border-radius: 50%;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28); transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .wa-float:hover { transform: scale(1.08); box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5); }
+
+      /* ---------- Mobile ---------- */
+      @media (max-width: 860px) {
+        .nav-row { justify-content: space-between; }
+        .nav-side { display: none; position: fixed; top: 0; right: 0; height: 100vh;
+          width: min(78vw, 320px); background: hsl(var(--primary)); flex-direction: column;
+          align-items: flex-start; justify-content: center; gap: 26px; padding: 40px;
+          box-shadow: -20px 0 50px rgba(0, 0, 0, 0.4); }
+        .nav-side.open { display: flex; }
+        .nav-side.left, .nav-side.right { justify-content: center; }
+        .nav-toggle { display: inline-flex; }
+        .grid { grid-template-columns: repeat(2, 1fr); }
+        .tile.wide { grid-column: span 2; }
+      }
+      @media (max-width: 520px) {
+        .grid { grid-template-columns: 1fr; }
+        .tile.tall, .tile.wide { grid-row: auto; grid-column: auto; aspect-ratio: 4 / 3; }
+        .wa-float { width: 64px; height: 64px; right: 16px; bottom: 16px; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ===== Header (mirrors main site nav, symmetric) ===== -->
+    <header>
+      <div class="nav-row">
+        <nav class="nav-side left" id="navLeft">
+          <a class="nav-link" href="/#waterproofing">Services</a>
+          <a class="nav-link" href="/#about-us">About</a>
+        </nav>
+
+        <a class="logo-badge" href="/" aria-label="Selokwane Projects home"
+           style="background-image: url('/logo.png');"></a>
+
+        <div class="nav-side right" id="navRight">
+          <a class="nav-link active" href="/gallery.html">Gallery</a>
+          <a class="nav-link" href="/contact.html">Contact</a>
+          <a class="nav-icon" href="https://www.facebook.com/profile.php?id=100083385788589"
+             target="_blank" rel="noopener noreferrer" aria-label="Selokwane Projects on Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a class="nav-phone" href="tel:0720145161">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            072 014 5161
+          </a>
+        </div>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12"></line>
+            <line x1="4" x2="20" y1="6" y2="6"></line>
+            <line x1="4" x2="20" y1="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- ===== Hero band ===== -->
+    <section class="g-hero">
+      <span class="eyebrow">Our Work</span>
+      <h1>Gallery</h1>
+      <p>A look at completed waterproofing, painting and protective-coating projects across homes and buildings.</p>
+    </section>
+
+    <!-- ===== Gallery grid (existing site photos for now) ===== -->
+    <section class="gallery">
+      <div class="container">
+        <div class="grid">
+          <a class="tile tall" href="#"><img src="https://vibe.filesafe.space/1788274059754407376/attachments/85a1a8a3-63b3-434b-b42e-6011bab505e3.png" alt="Waterproofing project" loading="lazy" /><span class="cap">Waterproofing</span></a>
+          <a class="tile" href="#"><img src="https://vibe.filesafe.space/1788274059754407376/attachments/bc100707-6463-4b95-863d-30afe10f022b.png" alt="Painting project" loading="lazy" /><span class="cap">Painting</span></a>
+          <a class="tile" href="#"><img src="https://vibe.filesafe.space/1788274059754407376/attachments/f10bf2d2-00c6-4717-93d0-2e97f85dbd77.png" alt="Roof coatings project" loading="lazy" /><span class="cap">Roof Coatings</span></a>
+          <a class="tile wide" href="#"><img src="https://vibe.filesafe.space/1788274059754407376/assets/52baeb9f-4b63-40b7-a925-511d53e1f107.png" alt="Row of freshly painted homes" loading="lazy" /><span class="cap">Exterior Finishes</span></a>
+          <a class="tile tall" href="#"><img src="https://vibe.filesafe.space/1788274059754407376/attachments/c92f1694-53ca-4edc-82e4-a7d05308d572.png" alt="Damp proofing project" loading="lazy" /><span class="cap">Damp Proofing</span></a>
+          <a class="tile" href="#"><img src="https://vibe.filesafe.space/1788274059754407376/attachments/d1c901f4-9ce9-4462-ab56-4e76156b4197.png" alt="Wall coatings project" loading="lazy" /><span class="cap">Wall Coatings</span></a>
+          <a class="tile" href="#"><img src="https://vibe.filesafe.space/1788274059754407376/attachments/07959e72-4645-42b0-9cd3-35bf50b30546.png" alt="Ceiling paving project" loading="lazy" /><span class="cap">Ceiling Paving</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="g-cta">
+      <h2>Like What You See?</h2>
+      <a href="tel:0720145161">Get Your Free Quote — 072 014 5161</a>
+    </section>
+
+    <footer class="g-foot">
+      <p>&copy; <span id="year"></span> Selokwane Projects Pty Ltd. All rights reserved.</p>
+    </footer>
+
+    <!-- WhatsApp float -->
+    <a href="https://wa.me/27720145161" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Chat with us on WhatsApp">
+      <svg viewBox="0 0 32 32" width="40" height="40" fill="currentColor" aria-hidden="true">
+        <path d="M16.001 3.2C8.938 3.2 3.2 8.938 3.2 16c0 2.257.59 4.463 1.712 6.41L3.2 28.8l6.55-1.715A12.74 12.74 0 0 0 16 28.8h.005C23.063 28.8 28.8 23.062 28.8 16S23.063 3.2 16.001 3.2zm0 23.02h-.004a10.6 10.6 0 0 1-5.4-1.48l-.387-.23-4.017 1.052 1.072-3.915-.252-.402A10.56 10.56 0 0 1 5.4 16c0-5.85 4.76-10.61 10.606-10.61 2.834 0 5.497 1.105 7.5 3.11a10.54 10.54 0 0 1 3.104 7.505c0 5.85-4.76 10.61-10.61 10.61zm5.816-7.946c-.319-.16-1.885-.93-2.177-1.037-.292-.106-.505-.16-.717.16-.213.32-.823 1.037-1.01 1.25-.186.213-.372.24-.69.08-.319-.16-1.346-.496-2.564-1.582-.948-.845-1.588-1.888-1.774-2.207-.186-.32-.02-.492.14-.651.144-.143.319-.372.478-.559.16-.186.213-.319.319-.532.107-.213.053-.399-.027-.559-.08-.16-.717-1.728-.982-2.366-.259-.621-.522-.537-.717-.547l-.611-.011c-.213 0-.559.08-.851.399-.292.32-1.116 1.091-1.116 2.659 0 1.568 1.143 3.083 1.302 3.296.16.213 2.249 3.434 5.45 4.815.762.329 1.356.525 1.82.672.765.243 1.46.209 2.01.127.613-.092 1.885-.771 2.151-1.516.266-.744.266-1.382.186-1.516-.08-.133-.292-.213-.611-.373z"/>
+      </svg>
+    </a>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      var t = document.getElementById("navToggle");
+      t.addEventListener("click", function () {
+        document.getElementById("navLeft").classList.toggle("open");
+        document.getElementById("navRight").classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>
