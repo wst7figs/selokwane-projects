@@ -98,20 +98,17 @@
       .g-hero h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1; }
       .g-hero p { margin: 18px auto 0; max-width: 620px; color: rgba(255, 255, 255, 0.8); font-size: 1.05rem; }
 
-      /* ---------- Gallery grid ---------- */
+      /* ---------- Gallery masonry ---------- */
       .gallery { padding: 70px 0 90px; }
-      .grid {
-        display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
-        grid-auto-flow: dense;
-      }
+      .grid { column-count: 3; column-gap: 18px; }
       .tile {
         position: relative; overflow: hidden; border-radius: 14px;
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12); aspect-ratio: 4 / 3;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
         background: hsl(var(--primary));
+        display: block; width: 100%; margin: 0 0 18px;
+        break-inside: avoid; -webkit-column-break-inside: avoid;
       }
-      .tile.tall { grid-row: span 2; aspect-ratio: 4 / 6; }
-      .tile.wide { grid-column: span 2; }
-      .tile img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+      .tile img { width: 100%; height: auto; display: block; transition: transform 0.6s ease; }
       .tile:hover img { transform: scale(1.08); }
       .tile .cap {
         position: absolute; left: 0; right: 0; bottom: 0;
@@ -153,12 +150,10 @@
         .nav-side.open { display: flex; }
         .nav-side.left, .nav-side.right { justify-content: center; }
         .nav-toggle { display: inline-flex; }
-        .grid { grid-template-columns: repeat(2, 1fr); }
-        .tile.wide { grid-column: span 2; }
+        .grid { column-count: 2; }
       }
       @media (max-width: 520px) {
-        .grid { grid-template-columns: 1fr; }
-        .tile.tall, .tile.wide { grid-row: auto; grid-column: auto; aspect-ratio: 4 / 3; }
+        .grid { column-count: 1; }
         .wa-float { width: 64px; height: 64px; right: 16px; bottom: 16px; }
       }
     </style>
